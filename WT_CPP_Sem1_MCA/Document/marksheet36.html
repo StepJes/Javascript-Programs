@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        Rows to display : <input type="number" step="1" ng-model="rowCount" max="10" min="0" />
+        <br /><br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                    <th>Salary (number filter)</th>
+                    <th>Salary (currency filter)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | limitTo:rowCount">
+                    <td> {{ employee.name | uppercase }} </td>
+                    <td> {{ employee.dateOfBirth | date:"dd/MM/yyyy" }} </td>
+                    <td> {{ employee.gender }} </td>
+                    <td> {{ employee.salary | number:2 }} </td>
+                    <td> {{ employee.salary | currency : "₹" : 1 }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    var app = angular
+        .module("myModule", [])
+        .controller("myController", function ($scope) {
+            var employees = [
+                {
+                    name: "Stephen", dateOfBirth: new Date("November 22, 2001"),
+                    gender: "Male", salary: 55000.788,
+                },
+                {
+                    name: "Jenny", dateOfBirth: new Date("April 05, 1999"),
+                    gender: "Female", salary: 68000,
+                },
+                {
+                    name: "Matthew", dateOfBirth: new Date("October 13, 2002"),
+                    gender: "Male", salary: 57000,
+                },
+                {
+                    name: "Natasha", dateOfBirth: new Date("June 11, 2001"),
+                    gender: "Female", salary: 53000,
+                },
+                {
+                    name: "John", dateOfBirth: new Date("January 18, 2001"),
+                    gender: "Male", salary: 60000,
+                },
+                {
+                    name: "Gwen", dateOfBirth: new Date("May 14, 2003"),
+                    gender: "Female", salary: 53000,
+                },
+            ];
+            $scope.employees = employees;
+            $scope.rowCount = 5;
+        });
+</script>
+</html>

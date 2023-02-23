@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    <script src="angular.min.js" ></script>
+    <script src="angweb.js"></script>
+    <link href="fourth.css" rel="stylesheet"/>
+</head>
+<body ng-app="myModule">
+        <div ng-controller="myController">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Likes</th>
+                        <th>Dislikes</th>
+                        <th>Like/Dislike</th>
+                    </tr>
+                </thead>
+            
+            <tbody>
+                <tr ng-repeat="technology in technologies">
+                    <td>{{technology.name}}</td>
+                    <td style="text-align: center;">{{technology.likes}}</td>
+                    <td style="text-align: center;">{{technology.dislike}}</td>
+                    <td>
+                        <input type="button" ng-click="incrementLikes(technology)" value="Like">
+                        <input type="button" ng-click="incrementDisLikes(technology)" value="Dislike">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+    </body>
+    </html>

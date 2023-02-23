@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+    <script src=angular.min.js></script>
+    <style>
+    h1{text-align: center;}
+    body{color: blanchedalmond;
+        background-image: linear-gradient(to right, purple, blue);}
+    </style>
+</head>
+<body>
+    <h1>NCRD SIMS, Nerul, Navi Mumbai</h1>
+    <h3>Name: <b>Stephen W Nadar</b></h3>
+    <h3>Roll No: 32</h3>
+
+    <div ng-app ="" ng-init="names=[{Subject:'MFCS1',Marks:'75'},{Subject:'WT',Marks:'80'},{Subject:'ADBMS',Marks:'79'},{Subject:'SPM',Marks:'84'},{Subject:'AJ',Marks:'89'}]">
+        <ul>
+            <li ng-repeat="x in names">Marks in {{x.Subject+' is '+x.Marks}}</li>
+        </ul>
+    </div>
+</body>
+</html>

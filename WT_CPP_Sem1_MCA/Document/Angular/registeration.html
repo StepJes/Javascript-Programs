@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+</head>
+
+<body ng-app="formExample">
+    <div ng-controller="formController">
+        <form novalidate>
+            <label>Name: <input type="text" ng-model="user.name" /></label><br />
+            <label>E-mail: <input type="email" ng-model="user.email" /></label><br />
+            Gender: <label><input type="radio" ng-model="user.gender" value="Male" />Male</label>
+            <label><input type="radio" ng-model="user.gender" value="Female" />Female</label><br />
+            <input type="submit" ng-click="update(user)" value="Save" />
+        </form>
+        <pre>user = {{user | json}}</pre>
+        <pre>master = {{master | json}}</pre>
+    </div>
+    <script>
+        angular.module('formExample', [])
+            .controller('formController', ['$scope', function ($scope) {
+                $scope.master = {};
+                $scope.update = function (user) {
+                    $scope.master = angular.copy(user);
+                };
+            }]);
+    </script>
+</body>
+
+</html>

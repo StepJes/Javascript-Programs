@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    * body{color: blanchedalmond;
+        background-image: linear-gradient(to right, purple, blue);}
+
+    #nc {
+        color: blue;
+        background-color: yellow;
+        border: 6px solid salmon;
+        text-align: center;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    #name {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+</style>
+
+<body class="body">
+    <form>
+        <h1 id="nc">
+            NCRD's Sterling Institute Of Managment Studies</h1>
+        <img class="center" src="http://www.ncrdsims.edu.in/site/views/images/NCRD-logo.png" height="100" width="600">
+        <h2 id="name">
+            <element style="color: rgb(255, 215, 120)"> NAME :</element> STEPHEN NADAR
+            <br>
+            <element style="color: rgb(255, 215, 120)">Roll No :</element> 32
+            <br>
+            <element style="color: rgb(255, 215, 120)">Marks in SEM 1 :</element>
+        </h2>
+        <h2 id="name">
+            <element ng-app="" ng-init=" marks =[{ sub:'Node', mark:80}, {sub:'Java', mark:97}, {sub:'SPM', mark:90}]">
+
+                <ul>
+                    <li ng-repeat="x in marks">
+                        {{x.sub+' : '+x.mark}}
+                    </li>
+                </ul>
+            </element>
+        </h2>
+    </form>
+</body>
+</html>

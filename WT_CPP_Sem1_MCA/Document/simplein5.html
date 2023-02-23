@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <h1>To Calculate simple interest</h1>
+     <div ng-app ng-init="amount=0; rate=0; time=0;">
+        <form action="">
+            <label for="number">Enter Amount</label><br>
+            <input type="number" name="number" id="number" ng-model="amount"><br>
+            <label for="rate">Rate</label><br>
+            <input type="number" name="rate" id="rate" ng-model="rate"><br>
+            <label for="number">Year</label><br>
+            <input type="number" name="year" id="year" ng-model="year">
+        </form>
+        <p>Simple Interest is  {{ (amount * year * rate) / 100 }}. </p> 
+     </div>
+</body>
+</html>

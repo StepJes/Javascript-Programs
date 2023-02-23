@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="angular.min.js"></script>
+   </head>
+   <body ng-app="">
+      <div>
+         <form>
+            Select Color:
+            <select ng-model="myVar">
+               <option value="pink">Pink
+               <option value="skyblue">Skyblue
+               <option value="lav">Lavender
+               <option value="vio">Violet
+               <option value="ind">Indigo
+               <option value="blu">Blue
+               <option value="gre">Green
+               <option value="yel">Yellow
+               <option value="ora">Orange
+               <option value="red">Red
+            </select>
+         </form>
+      </div>
+      <div ng-switch="myVar">
+      <div ng-switch-when-> </div>
+      <div ng-switchmyVar>
+         <div ng-switch-when="pink" style="background-color: pink;">
+            <h1>Pink</h1>
+            <p>Pink Color</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="skyblue" style="background-color: rgb(19, 165, 214);">
+            <h1>Sky Blue</h1>
+            <p>Sky Blue Color.</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="lav" style="background-color: rgb(226, 184, 253)">
+            <h1>Lavender</h1>
+            <p>Lavender Color</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="vio" style="background-color: rgb(101, 75, 250)">
+            <h1>Violet</h1>
+            <p>Violet Color</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="ind" style="background-color: rgb(169, 104, 209)">
+            <h1>Indigo</h1>
+            <p>Indigo Color</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="blu" style="background-color: rgb(38, 78, 255)">
+            <h1>Blue</h1>
+            <p>Blue Color</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="gre" style="background-color: rgb(0, 255, 34)">
+            <h1>Green</h1>
+            <p>Green Color</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="yel" style="background-color: rgb(255, 251, 0)">
+            <h1>Yellow</h1>
+            <p>Yellow Color</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="ora" style="background-color: rgb(255, 180, 93)">
+            <h1>Orange</h1>
+            <p>Orange Color</p>
+         </div>
+      </div>
+      <div ng-switch="myVar">
+         <div ng-switch-when="red" style="background-color: rgb(255, 89, 89)">
+            <h1>Red</h1>
+            <p>Red Color</p>
+         </div>
+      </div>
+      <p>The ng-switch directive hides and shows HTM sections depending on the value of the dropdown list.</p>
+   </body>
+</html>

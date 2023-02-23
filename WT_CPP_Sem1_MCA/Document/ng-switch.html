@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Shubham_105</title>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="">
+<div> <form> Select Color:
+<select ng-model="myVar">
+<option value="pink">Pink
+<option value="ablu">Sky Blue 
+    <option value="lav">Lavender
+</select> </form> </div>
+<div ng-switch="myVar">
+<div ng-switch-when-> </div>
+<div ng-switch="myVar">
+<div ng-switch-when="pink" style="background-color: pink;">
+<h1>Pink</h1>
+<p>Pink Color</p>
+</div></div>
+<div ng-switch="myVar">
+<div ng-switch-when="ablu" style="background-color: lightblue;">
+<h1>Sky Blue</h1>
+<p>Sky Blue Color.</p>
+</div> </div>
+<div ng-switch="myVar">
+<div ng-switch-when="lav" style="background-color: rgb(226, 184, 253)">
+<h1>Lavender</h1>
+<p>Lavender Color</p>
+</div></div>
+<p>The ng-switch directive hides and shows HTM sections depending on the value of the dropdown list.</p>
+</body></html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controllers</title>
+    <script src="angular.min.js" ></script>
+</head>
+<body ng-app ng-init="checked=true">
+    Click Me:<input type="checkbox" type="text" ng-model="checked"><br/> 
+<div>
+    New:<input ng-if="checked" type="text">
+</div>
+<div>
+    Read-only:<input ng-readonly="checked" type="text"
+value="This is read-only">
+</div>
+<div>
+    Disabled:<input ng-disabled="checked" type="text"
+    value="This is Disabled"> 
+</div>
+</body>
+</html>
